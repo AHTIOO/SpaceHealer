@@ -20,7 +20,8 @@ public class Unit {
     public enum unitClass    : byte
     {
         Tecnic,
-        Medic
+        Medic,
+        Guard
         
            
     }

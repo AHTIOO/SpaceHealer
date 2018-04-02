@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
-    public List<Object> baseObjects = new List<Object>();
+    public List<Object> AllObjects = new List<Object>();
+    
 
-    public List<Object> Objects = new List<Object>();
- 
+
+
 }

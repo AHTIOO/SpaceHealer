@@ -9,7 +9,7 @@ public class MapGeneration : MonoBehaviour {
     int depth = csGlobal.depth;
     //public GameObject MapContainer;
     public GameObject FloorPrefab;
-    public List<GameObject> BaseObject = new List<GameObject>();
+    public List<Object> BaseObject = new List<Object>();
     byte[,,] map;
     GameObject[,,] Gmap;
     GameObject[] Floors;
@@ -105,7 +105,7 @@ public class MapGeneration : MonoBehaviour {
                         map[j, i, k] = 1;
                     if (map[j, i, k] != 0)
                     {
-                        Gmap[k, i, j] = Instantiate(BaseObject[map[j, i, k] - 1], objpos, BaseObject[map[j, i, k] - 1].transform.rotation);
+                        Gmap[k, i, j] = Instantiate(BaseObject[map[j, i, k] - 1].gUnit, objpos, BaseObject[map[j, i, k] - 1].gUnit.transform.rotation);
                         Gmap[k, i, j].transform.SetParent(Floors[i].transform);
 
                     }
